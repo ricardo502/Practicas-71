@@ -1,51 +1,30 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Práctica 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temas con HTML y CSS</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+    <main class="contenedor">
+        <h1>Selector de temas</h1>
+        <p class="introduccion">Elige un tema para cambiar el estilo de la tarjeta.</p>
 
-  <h1>Mi lista</h1>
-  <h3>Una lista de cosas</h3>
+        <input type="radio" name="tema" id="claro" checked>
+        <input type="radio" name="tema" id="oscuro">
+        <input type="radio" name="tema" id="personalizado">
 
-  <br>
-  <br>
-
-  <h2>Gran subtítulo</h2>
-  <h3>Subtítulo menor 1</h3>
-
-  <div id="parrafos">
-    <p>Este párrafo está dentro de la etiqueta div.</p>
-    <p>Este también.</p>
-  </div>
-
-  <p>Pero este no</p>
-
-  <h4 id="subtitulo">Subtítulo menor 4</h4>
-
-  <ol>
-    <li><b>Primer elemento</b></li>
-    <li>
-      <b>Segundo elemento</b>
-      <ul>
-        <li>elemento intermedio uno</li>
-        <li>elemento intermedio dos</li>
-      </ul>
-    </li>
-    <li><b>Tercer elemento</b></li>
-  </ol>
-
-  <br>
-  <br>
-
-  <div id="pie">
-    <p>Este es el pie de página</p>
-  </div>
-
-  <p>Gracias</p>
-
-  <script src="practica.js"></script>
-
+        <section class="tarjeta">
+            <div class="opciones">
+                <label for="claro">Claro</label>
+                <label for="oscuro">Oscuro</label>
+                <label for="personalizado">Personalizado</label>
+            </div>
+            <h2>Hola, mundo</h2>
+            <p>Esta es una tarjeta sencilla que cambia de tema usando solamente CSS.</p>
+            <button>Boton principal</button>
+        </section>
+    </main>
 </body>
 </html>

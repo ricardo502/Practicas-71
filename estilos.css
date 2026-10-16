@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    color: #202124;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 520px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 8px;
+}
+
+.introduccion {
+    margin-top: 0;
+    color: #666;
+}
+
+input {
+    display: none;
+}
+
+.opciones {
+    display: flex;
+    margin: 0 auto 35px;
+    border: 1px solid #d6d6d6;
+    border-radius: 6px;
+    overflow: hidden;
+    background: white;
+}
+
+.opciones label {
+    flex: 1;
+    padding: 12px 8px;
+    cursor: pointer;
+    border-right: 1px solid #d6d6d6;
+}
+
+.opciones label:last-child {
+    border-right: 0;
+}
+
+.tarjeta {
+    padding: 35px;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 3px 10px #00000018;
+}
+
+.tarjeta h2 {
+    margin-top: 0;
+    font-size: 28px;
+}
+
+.tarjeta p {
+    line-height: 1.6;
+    color: #666;
+}
+
+button {
+    padding: 12px 18px;
+    border: 0;
+    border-radius: 4px;
+    color: white;
+    background: #2764d8;
+    cursor: pointer;
+}
+
+/* Tema claro */
+#claro:checked ~ .tarjeta .opciones label[for="claro"],
+/* Tema oscuro */
+#oscuro:checked ~ .tarjeta .opciones label[for="oscuro"],
+/* Tema personalizado */
+#personalizado:checked ~ .tarjeta .opciones label[for="personalizado"] {
+    color: white;
+    background: #2764d8;
+}
+
+#oscuro:checked ~ .tarjeta {
+    color: white;
+    background: #18212b;
+    border-color: #18212b;
+}
+
+#oscuro:checked ~ .tarjeta p {
+    color: #d5d9df;
+}
+
+#oscuro:checked ~ .tarjeta .opciones {
+    background: #18212b;
+    border-color: #384453;
+    color: white;
+}
+
+#personalizado:checked ~ .tarjeta {
+    color: #163d2a;
+    background: #fffdf4;
+    border-color: #e8e1c9;
+}
+
+#personalizado:checked ~ .tarjeta p {
+    color: #687166;
+}
+
+#personalizado:checked ~ .tarjeta button,
+#personalizado:checked ~ .tarjeta .opciones label[for="personalizado"] {
+    background: #29965a;
+}
+
+@media (max-width: 480px) {
+    .contenedor {
+        margin: 30px auto;
+    }
+
+    .tarjeta {
+        padding: 25px;
+    }
+
+    .opciones label {
+        font-size: 13px;
+    }
+}
